@@ -1,0 +1,67 @@
+/* animaciones */
+
+body {
+    background-color: rgb(236, 180, 38);
+}
+
+/*words estaa clase afecta a las 3 sectiones*/
+
+.words {
+    color:rgb(236, 180, 38);
+    font-size: 0;
+    line-height: 1.5; /*altura de la linea de las letras*/
+}
+
+.words span {
+    font-size: 5rem;
+    display: inline-block;
+
+    animation: move 3s ease-in-out infinite; 
+    /*nombre de la animacion inventarlo, le ponemos el tiempo que queremos que dure, despues ease-in-out es como queremos que sean las ondas de animacion, y el infinite para que no pare*/
+}
+
+/*nyeframes, es para controlar el tiempo de las transformaciones de la animacion*/
+
+@keyframes move {
+    0% {
+        transform: translate(-30%, 0);
+    }
+    50% {
+        text-shadow: 0 25px 50px rgba(0, 0, 0, 0.75) ;
+    }
+    100% {
+        transform: translate(30%, 0);
+}
+
+}
+
+/*ahora a la animacion le vamos a poner que actue en diferentres fomas en las sections, para en que cada span reacciones en diferentes momentos*/
+
+/*aca lo que estoy diciendo es que el segundo hijo (child) que se encuentre en la clase words tenga una delay de 0.5 segundos y asi irse incrementando*/
+
+.words span:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.words span:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.words span:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+.words span:nth-child(5) {
+    animation-delay: 2s;
+}
+
+.words span:nth-child(6) {
+    animation-delay: 2.5s;
+}
+
+.words span:nth-child(7) {
+    animation-delay: 3s;
+}
+
+/*librerias aos hay que instalarlas, pegar la primera arriba en el head, y despues, pegar el segundo abajo al final*/
+/*animate.css, esta pagina con una clase, y tambien instalarlas como la anterior*/
